@@ -1,0 +1,13 @@
+<div class="showPage">
+    <h1>Showing {{user.username}}</h1>
+
+
+<div>Favorite Author: {{user.author}}</div>
+
+<form action='/users/{{user._id}}?_method=DELETE' method='POST'>
+    <input type="submit" value="Delete User">
+</form>
+
+<div><a href='/users/{{user._id}}/edit'>Edit User</a></div>
+<div><a href='/users'>Go Back to Users</a></div>
+</div>
