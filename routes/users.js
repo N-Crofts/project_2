@@ -24,12 +24,6 @@ router.get('/:id', (req, res) => {
     })
 })
 
-router.get('/:id', (req, res) => {
-  Author.findById(req.params.id)
-    .then((author) => {
-      res.render('authors/show', { author })
-    })
-})
 
 //edit, render edit form
 router.get('/:id/edit', (req, res) => {
