@@ -10,12 +10,12 @@ const AuthorSchema = new Schema({
     name: String,
     about: String,
     novels: String,
-    quotes: []
+    quotes: [QuoteSchema]
 })
 
 const UserSchema = new Schema({
     username: String,
-    author: String
+    authors: [AuthorSchema]
 })
 
 const QuoteModel = mongoose.model('Quote', QuoteSchema)

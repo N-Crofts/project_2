@@ -19,7 +19,15 @@ router.get('/new', (req, res) => {
 router.get('/:id', (req, res) => {
   User.findById(req.params.id)
     .then((user) => {
-      res.render('users/show', { user })
+      const authors = user.authors
+      res.render('users/show', { user, authors })
+    })
+})
+
+router.get('/:id', (req, res) => {
+  Author.findById(req.params.id)
+    .then((author) => {
+      res.render('authors/show', { author })
     })
 })
 

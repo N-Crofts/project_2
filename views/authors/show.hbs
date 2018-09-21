@@ -1,0 +1,14 @@
+<h1>Lorem Ipsum</h1>
+
+<div>{{author.name}}</div>
+<div>About: {{author.about}}</div>
+<div>Selected Works: {{author.novels}}</div>
+
+{{!-- See quotes and advice from this author --}}
+
+<form action='/users/{{userId}}/authors/{{author.id}}?_method=DELETE' method='POST'>
+    <input type="submit" value="Delete Author">
+</form>
+
+<div><a href='/users/{{userId}}/authors/{{author._id}}/edit'>Edit This Author</a></div>
+<div><a href='/users/{{userId}}/authors'>Go Back</a></div>
