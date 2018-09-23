@@ -9,12 +9,18 @@
 <div>
     <h2>Selected Works:</h2> 
     {{#each author.novels }}
-        <p>{{this.title}}</p>
+        <p>{{this.title}} <a href='/authors/{{author._id}}/novels/{{novel._id}}'>Go to title</a></p>
     {{/each}}
 
 </div>
 
 
+
+<div>
+    {{#each authors}}
+    <div>Authorname: {{this.name}} <a href='/authors/{{this._id}}'>Go to author</a></div>
+    {{/each}}
+</div>
 
 
 {{!-- <div>
@@ -33,3 +39,6 @@
 
 <div><a href='/users/{{userId}}/authors/{{author._id}}/edit'>Edit This Author</a></div>
 <div><a href='/authors'>Go Back</a></div>
+
+<div><a href='/'>Home</a></div>
+
