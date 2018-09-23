@@ -4,20 +4,26 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
 
 const Schema = require('./schema')
 
-const { User, Author, Quote } = Schema
+const { User, Author, Novel } = Schema
 
 ///////////////////////////////////////////////////////////////
 
 
-const firstQuote = new Quote({
-    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    name: "Raymond Chandler"
+const firstNovel = new Novel({
+    writer: "Raymond Chandler",
+    title: "The Big Sleep",
+    synopsis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
 })
 
-const secondQuote = new Quote({
-    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    name: "Agatha Christi"
+const secondNovel = new Novel({
+    writer: "Dashiell Hammet",
+    title: "Red Harvest",
+    synopsis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
 })
+
+
 
 ///////////////////////////////////////////////////////////////
 
@@ -25,28 +31,34 @@ const secondQuote = new Quote({
 const firstAuthor = new Author({
     name: "Raymond Chandler",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    novels: "Lorem Ipsum, Dolor Sit Amet, Consectur, and Adipiscing Elit",
-    quotes: [firstQuote] 
+    novels: [firstNovel] 
 })
 
 const secondAuthor = new Author({
-    name: "Agatha Cristi",
+    name: "Dashiell Hammet",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    novels: "Lorem Ipsum, Dolor Sit Amet, Consectur, and Adipiscing Elit",
-    quotes: [secondQuote] 
+    novels: [secondNovel] 
 })
+
+
 
 ///////////////////////////////////////////////////////////////
 
 
 const firstUser = new User({
-    username: "Nicholas Crofts",
-    authors: [firstAuthor]
+    username: "Johnny Gumshoe",
+    age: 27,
+    location: "Atlanta, GA",
+    authors: "Michael Collins, Raymond Chandler",
+    network: "twitter"
 })
 
 const secondUser = new User({
-    username: "Sorum Panchal",
-    authors: [secondAuthor]
+    username: "Nic Cage",
+    age: 54, 
+    location: "Los Angelas",
+    authors: "Agatha Christie, Sheridan LeFanu",
+    network: "instagram"
 })
 
 ///////////////////////////////////////////////////////////////

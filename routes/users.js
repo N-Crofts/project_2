@@ -15,24 +15,6 @@ router.get('/new', (req, res) => {
   res.render('users/new')
 })
 
-//show, show one
-router.get('/:id', (req, res) => {
-  User.findById(req.params.id)
-    .then((user) => {
-      const authors = user.authors
-      res.render('users/show', { user, authors })
-    })
-})
-
-
-//edit, render edit form
-router.get('/:id/edit', (req, res) => {
-  User.findById(req.params.id)
-    .then((user) => {
-      res.render('users/edit', { user })
-    })
-})
-
 //create
 router.post('/', (req, res) => {
   User.create(req.body)
@@ -41,11 +23,31 @@ router.post('/', (req, res) => {
     })
 })
 
+//edit, render edit form
+router.get('/:id/edit', (req, res) => {
+  User.findById(req.params.id)
+    .then((user) => {
+      // const authors = user.authors
+      // res.render('users/edit', { user, authors })
+      res.render('users/edit', { user })
+    })
+})
+
 //update
 router.put('/:id', (req, res) => {
   User.findByIdAndUpdate(req.params.id, req.body)
     .then((user) => {
       res.redirect(`/users/${user._id}`)
+    })
+})
+
+//show, show one
+router.get('/:id', (req, res) => {
+  User.findById(req.params.id)
+    .then((user) => {
+      // const authors = user.authors
+      // res.render('users/show', { user, authors })
+      res.render('users/show', { user })
     })
 })
 

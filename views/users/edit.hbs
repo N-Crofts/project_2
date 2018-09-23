@@ -3,7 +3,7 @@
 
 <form action='/users/{{user._id}}?_method=PUT' method='POST'>
     <div>User: <input type='text' name='username' value='{{user.username}}'></div>
-    <div>Favorite Authors: <input type='text' name='author' value='{{user.author}}'></div>
+    <div>Favorite Authors: <input type='text' name='author' value='{{#each authors}} {{name}} {{/each}}'></div>
     <div><input type='submit' value='Update User'></div>
 </form>
 
@@ -11,3 +11,11 @@
 </div>
 
 </div>
+
+{{!-- <div>
+    <h2>Favorite Authors:</h2> 
+    {{#each authors }}
+        <p>{{name}}</p>
+    {{/each}}
+
+</div> --}}

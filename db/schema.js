@@ -1,29 +1,32 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const QuoteSchema = new Schema({
-    quote: String,
-    name: String
+const NovelSchema = new Schema({
+    witer: String,
+    title: String,
+    synopsis: String
 })
 
 const AuthorSchema = new Schema({
     name: String,
     about: String,
-    novels: String,
-    quotes: [QuoteSchema]
+    novels: [NovelSchema],
 })
 
 const UserSchema = new Schema({
     username: String,
-    authors: [AuthorSchema]
+    age: Number,
+    location: String,
+    authors: String,
+    network: String
 })
 
-const QuoteModel = mongoose.model('Quote', QuoteSchema)
+const NovelModel = mongoose.model('Novel', NovelSchema)
 const AuthorModel = mongoose.model('Author', AuthorSchema)
 const UserModel = mongoose.model('User', UserSchema)
 
 module.exports = {
-    Quote: QuoteModel,
+    Novel: NovelModel,
     Author: AuthorModel,
     User: UserModel
 }

@@ -1,14 +1,13 @@
-{{!-- <header>
-    <h1>All Authors <a href='/authors/{{this._id}}/authors/new'>Add New Author</a></h1>
+<header>
+    <h1>All Novelists <a href='/authors/{{this._id}}/authors/new'>Add New Author</a></h1>
 </header>
 
 <div>
     {{#each authors}}
     <div>
-        Name: {{this.name}}
-        <a href="/users/{{../userId}}/authors/{{this._id}}">More On This Author</a>
+        {{this.name}}
+        <a href="/authors/{{../author._Id}}">More On This Author</a>
     </div>
     {{/each}}
-</div> --}}
+</div>
 
-<h1>Hello</h1>
