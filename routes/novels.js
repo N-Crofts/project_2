@@ -1,33 +1,50 @@
 var express = require('express')
 var router = express.Router({ mergeParams: true })
-const { User } = require('../db/schema')
+const { Author, Novel } = require('../db/schema')
+
+// const Schema = require("../db/schema.js")
+// const AuthorModel = Schema.NovelModel
+
 
 //index, show all
 router.get('/', (req, res) => {
-    User.findById(req.params.userId)
-        .then((user) => {
-            const author = user.authors.id(req.params.authorId)
-            const quotes = author.quotes
-            res.render('gigs/index', {
-                userId: req.params.userId,
-                authorId: req.params.authorId,
-                quotes
+    const authorId = req.params.authorId
+    Author.findById(authorId)
+        .then((author) => {
+            res.render('novels/index', {
+                author: author
             })
         })
 })
+
+
+// router.get('/', (req, res) => {
+//     Author.findById(req.params.authorId)
+//         .then((author) => {
+//             res.render('novels/index', {
+//                 authorId: req.params.authorId,
+//                 novels: author.novels
+//             })
+//         })
+// })
 
 //new, render new form
 
 
 //show, show one
-router.get('/:id', (req, res) => {
-    User.findById(req.params.userId)
-        .then((user) => {
-            const author = user.authors.id(req.params.authorId)
-            const quote = author.quotes.id(req.params.id)
-            res.send(quote)
-        })
-})
+
+
+
+
+// router.get('/:id', (req, res) => {
+//     Author.findById(req.params.authorId)
+//         .then((author) => {
+//             res.render('novel/show', {
+//                 authorId: req.params.authorId,
+//                 novel: author.novels.id(req.params.id)
+//             })
+//         })
+// })
 
 
 //edit, render edit form

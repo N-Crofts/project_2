@@ -9,18 +9,14 @@
 <div>
     <h2>Selected Works:</h2> 
     {{#each author.novels }}
-        <p>{{this.title}} <a href='/authors/{{author._id}}/novels/{{novel._id}}'>Go to title</a></p>
+        <p>{{this.title}} <a href='/authors/{{this._id}}/novels/{{novel._id}}'>Go to title</a></p>
     {{/each}}
 
 </div>
 
 
 
-<div>
-    {{#each authors}}
-    <div>Authorname: {{this.name}} <a href='/authors/{{this._id}}'>Go to author</a></div>
-    {{/each}}
-</div>
+
 
 
 {{!-- <div>

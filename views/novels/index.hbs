@@ -1,11 +1,23 @@
-<h1>Lorem Ipsum <a href="/users/{{userId}}/authors/{{authorId}}/quotes/new">Add A New Quote</a></h1>
+{{!-- <h1>Novels <a href="/authors/{{authorId}}/novels/new">Add A New Novel</a></h1>
 
 <div>
+    {{#each novels}}
+    <div>
+        {{this.title}}
+        <a href="../authors/{{authorId}}/novels/{{this._id}}">See More</a>
+    </div>
+    {{/each}}
+</div> --}}
+
+<h1>Index for Novels</h1>
+
+
+{{!-- <div>
     {{#each quotes}}
     <div>
         {{this.quote}}
         <a href="/users/{{../userId}}/authors/{{../authorId}}/quotes/{{this._id}}">See More</a>
     </div>
     {{/each}}
-</div>
+</div> --}}
 
