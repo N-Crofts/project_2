@@ -9,11 +9,20 @@
 <div>
     <h2>Selected Works:</h2> 
     {{#each author.novels }}
-        <p>{{this.title}} <a href='/authors/{{this._id}}/novels/{{novel._id}}'>Go to title</a></p>
+        <p>{{this.title}} 
+            <a href='/authors/{{../author._id}}/novels/{{this._id}}'>Go to Selected Works</a>
+            </p>
     {{/each}}
 
 </div>
 
+
+
+
+
+{{!-- Link below will take you to the index for all novels --}}
+
+{{!-- a href='/authors/{{this._id}}/novels/{{novel._id}}' --}}
 
 
 

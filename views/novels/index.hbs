@@ -11,6 +11,23 @@
 
 <h1>Index for Novels</h1>
 
+{{!-- 
+   <h2>Selected Works:</h2> 
+    {{#each novels }}
+        <p>{{title}} 
+            <a href='/authors/{{this._id}}/novels/'>Go to Selected Works</a>
+            </p>
+    {{/each}} --}}
+
+
+<div>
+    <h2>Selected Works:</h2> 
+    {{#each author.novels }}
+        <p>{{this.title}}</p>
+    {{/each}}
+
+</div>
+
 
 {{!-- <div>
     {{#each quotes}}
@@ -20,4 +37,8 @@
     </div>
     {{/each}}
 </div> --}}
+
+<div><a href='/authors/'>Go Back</a></div>
+
+<div><a href='/'>Home</a></div>
 

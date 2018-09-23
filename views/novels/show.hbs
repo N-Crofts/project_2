@@ -1,1 +1,14 @@
 <h1>Show for Novels</h1>
+
+    <h2>Selected Works:</h2> 
+    {{#each author.novels }}
+        <p>{{this.title}} 
+            {{!-- <a href='/authors/{{../author._id}}/novels/{{this._id}}'>Go to Selected Works</a> --}}
+            </p>
+    {{/each}}
+
+    
+
+    <div><a href='/authors/'>Go Back</a></div>
+
+<div><a href='/'>Home</a></div>

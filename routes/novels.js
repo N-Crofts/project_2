@@ -18,21 +18,25 @@ router.get('/', (req, res) => {
 })
 
 
-// router.get('/', (req, res) => {
-//     Author.findById(req.params.authorId)
-//         .then((author) => {
-//             res.render('novels/index', {
-//                 authorId: req.params.authorId,
-//                 novels: author.novels
-//             })
-//         })
-// })
-
 //new, render new form
 
 
 //show, show one
+router.get('/:novelId', (req, res) => {
+    const authorId = req.params.authorId
+    const novelId = req.params.novelId
 
+    Author.findById(authorId)
+        .then((author) => {
+            const novel = author.novels.id(novelId)
+            res.render('novels/show', {
+                novel: novel,
+                authorId: authorId,
+                author: author
+
+            })
+        })
+})
 
 
 
