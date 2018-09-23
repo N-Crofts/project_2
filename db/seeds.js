@@ -57,7 +57,7 @@ const secondUser = new User({
     username: "Nic Cage",
     age: 54, 
     location: "Los Angelas",
-    authors: "Agatha Christie, Sheridan LeFanu",
+    authors: "Sheridan LeFanu, Agatha Christie",
     network: "instagram"
 })
 
@@ -73,5 +73,13 @@ User.deleteMany()
         mongoose.connection.close()
     })
 
+Author.deleteMany()
+    .then(() => {
+        return Author.insertMany([firstAuthor, secondAuthor])
+    })
+    .then(() => {
+        console.log('Done Seeding!')
+        mongoose.connection.close()
+    })
 
     
