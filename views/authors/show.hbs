@@ -8,8 +8,8 @@
 
 <div>
     <h2>Selected Works:</h2> 
-    {{#each novels }}
-        <p>{{title}}</p>
+    {{#each author.novels }}
+        <p>{{this.title}}</p>
     {{/each}}
 
 </div>
