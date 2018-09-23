@@ -11,13 +11,13 @@ body {
 
 .heroic {  
   padding-top: 3em;
-  color: rgba(247, 245, 245, 0.6);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 80px;
 }
 
 .heroicTwo {
   font-size: 40px;
-  color: rgba(247, 245, 245, 0.6);
+  color: rgba(255, 255, 255, 0.6);
   padding-left: 5em;
   padding-right: 5em;
   padding-bottom: 20em;
@@ -45,12 +45,12 @@ header {
 }
 
 a {
-  color: rgba(247, 245, 245, 0.6);
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: underline;
 }
 
 a:hover {
-  color: rgba(247, 245, 245, 0.8);
+  color: rgb(245, 245, 245);
 }
 
 .singleUser {

@@ -3,7 +3,16 @@
 
 <form action='/users/{{user._id}}?_method=PUT' method='POST'>
     <div>User: <input type='text' name='username' value='{{user.username}}'></div>
-    <div>Favorite Authors: <input type='text' name='author' value='{{#each authors}} {{name}} {{/each}}'></div>
+    <div>Age: <input type='text' name='age' value='{{user.age}}'></div>
+    <div>Location: <input type='text' name='location' value='{{user.location}}'></div>
+    <div>Network: <input type='text' name='network' value='{{user.network}}'></div>
+    <div>Favorite Authors: <input type='text' name='authors' value='{{user.authors}}'></div>
+
+
+
+
+    {{!-- <div>Favorite Authors: <input type='text' name='name' value='{{#each authors}} {{name}} {{/each}}'></div> --}}
+
     <div><input type='submit' value='Update User'></div>
 </form>
 

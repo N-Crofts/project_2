@@ -1,14 +1,19 @@
-<h1>Show for Novels</h1>
+<h1>{{author.name}}</h1>
 
-    <h2>Selected Works:</h2> 
-    {{#each author.novels }}
-        <p>{{this.title}} 
-            {{!-- <a href='/authors/{{../author._id}}/novels/{{this._id}}'>Go to Selected Works</a> --}}
-            </p>
-    {{/each}}
+    <h3>Selected Works:</h3>
+    
+    <h2>{{novel.title}}</h2>
+        <p>
+            <h4>{{novel.year}}</h4>
+            <h4>{{novel.synopsis}}</h4>
+        </p>
+    {{!-- {{/each}} --}}
 
     
 
     <div><a href='/authors/'>Go Back</a></div>
 
 <div><a href='/'>Home</a></div>
+
+
+{{!-- <a href='/authors/{{../author._id}}/novels/{{this._id}}'>Go to Selected Works</a> --}}
