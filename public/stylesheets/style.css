@@ -213,6 +213,19 @@ a:hover {
 
 
 
+.showAuthors, .indexAuthors {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://nofilmschool.com/sites/default/files/styles/facebook/public/film_noir.jpg?itok=5O5UXiFC') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  color: rgba(245, 245, 245, 0.7);
+  padding-bottom: 35%;
+}
+
+
+
+
 
 
 

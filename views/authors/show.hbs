@@ -1,10 +1,9 @@
 
 
-<h1>{{author.name}}</h1>
-<div>About: {{author.about}}</div>
-{{!-- <div>Selected Works: {{author.novels}}</div> --}}
+{{!-- <h1>{{author.name}}</h1>
+<div>About: {{author.about}}</div> --}}
 
-
+{{!-- 
 
 <div>
     <h2>Selected Works:</h2> 
@@ -16,31 +15,9 @@
 
 </div>
 
-{{!-- <h3>
-    {{#each author.novels }}
-        <a href='/authors/{{../author._id}}/novels/{{this._id}}'></a>
-    {{/each}}
-</h3> --}}
 
 
 
-
-
-{{!-- Link below will take you to the index for all novels --}}
-
-{{!-- a href='/authors/{{this._id}}/novels/{{novel._id}}' --}}
-
-
-
-
-
-{{!-- <div>
-    <h2>Favorite Authors:</h2> 
-    {{#each authors }}
-        <p>{{name}}</p>
-    {{/each}}
-
-</div> --}}
 
 
 
@@ -51,5 +28,48 @@
 <div><a href='/users/{{userId}}/authors/{{author._id}}/edit'>Edit This Author</a></div>
 <div><a href='/authors'>Go Back</a></div>
 
-<div><a href='/'>Home</a></div>
+<div><a href='/'>Home</a></div> --}}
+
+{{!-- ///////////////////// --}}
+
+<div class="showAuthors">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+      <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="mt-5">{{author.name}}</h1>
+            <p>{{author.about}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
 
