@@ -1,18 +1,21 @@
-<header>
+<div class="indexUsers">
+<h1 class="pageBanner">
+    <div class="animated fadeIn">Mystery Hub</div>
+</h1>
 
-<h2>Users</h2>
+<h2 class="pageTitle">
+    <div class="animated fadeIn">Members</div>
+</h2>
 
-<h3>
-    <a href='/users/new'>New here? Click here!</a>
-</h3>
-
-
-</header>
-
-<div class="users">
-    {{#each users}}
-        <div class="singleUser">{{this.username}} <a class="singleFav" href='/users/{{this._id}}'>See Favorites</a></div>
-    {{/each}}
+<div class="memberSignOn">
+    <a href='users/new'>Join and connect with other fans</a>
 </div>
 
+<p class="users">
+    {{#each users}}
+        <div class="singleUser">{{this.username}} <a class="singleFav" href='/users/{{this._id}}'>See Profile</a></div>
+    {{/each}}
+</p>
+
 <div><a href='/'>Home</a></div>
+</div>
