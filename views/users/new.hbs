@@ -1,5 +1,81 @@
-
 <div class="newUser">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+      <div class="container">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">{{!-- Home --}}
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/users">Members</a>
+            </li>
+            {{!-- <li class="nav-item">
+              <a class="nav-link" href="/users/{{user._id}}/edit">Edit</a>
+            </li>
+            <li class="nav-item">
+<form class="nav-link" action='/users/{{user._id}}?_method=DELETE' method='POST'>
+    <input type="submit" value="Delete">
+</form>
+         </li> --}}
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="mt-5">New Caseworker:</h1>
+            <div>
+                <br>
+    <p>    
+        <form class="signUp" action='/users' method='POST'>
+
+    <div class="left">name:</div> <div class="right"><input type='text' name='username' placeholder='John Doe'></div>
+    <br>
+    <br>
+    <div class="left">age:</div> <div class="right"><input type='text' name='age' placeholder='32'></div>
+    <br>
+    <br>
+    <div class="left">city:</div> <div class="right"><input type='text' name='location' placeholder='New York'></div>
+    <br>
+    <br>
+    <div class="left">network:</div> <div class="right"><input type='text' name='network' placeholder='twitter.com/JohnDoe'></div>
+    <br>
+    <br>
+    <div class="left">favorite author:</div> <div class="right"><input type='text' name='authors' placeholder='Raymond Chandler'></div> 
+    <br>
+    <br>
+    <div class="join"><input type='submit' value='join'></div>
+
+        </form>
+    
+    </p>     
+
+</div>
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
+
+
+
+
+
+{{!-- ////////////////////////////////// --}}
+
+
+{{!-- <div class="newUser">
 <h1>New User</h1>
 
 <form action='/users' method='POST'>
@@ -12,7 +88,7 @@
 </form>
 
 <div><a href='/users'>Go Back to Users</a></div>
-</div>
+</div> --}}
 
 
 
