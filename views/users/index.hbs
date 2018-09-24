@@ -1,21 +1,50 @@
+
 <div class="indexUsers">
-<h1 class="pageBanner">
-    <div class="animated fadeIn">Mystery Hub</div>
-</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+      <div class="container">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">{{!-- Home --}}
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href='/users/new'>Join And Connect With Other Fans</a>
+            </li>
 
-<h2 class="pageTitle">
-    <div class="animated fadeIn">Members</div>
-</h2>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-<div class="memberSignOn">
-    <a href='users/new'>Join and connect with other fans</a>
-</div>
-
-<p class="users">
+    <!-- Page Content -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="mt-5">Members</h1>
+            <p>{{author.about}}</p>
+            <div>
+                <ul>
     {{#each users}}
-        <div class="singleUser">{{this.username}} <a class="singleFav" href='/users/{{this._id}}'>See Profile</a></div>
+        <li>
+        <div class="singleUser"><a href='/users/{{this._id}}'>{{this.username}}</a></div>
+        </li>
     {{/each}}
-</p>
-
-<div><a href='/'>Home</a></div>
+    </ul>
 </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
+
+{{!-- ///////////////////////////////////////////// --}}
+
+
+
