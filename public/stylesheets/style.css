@@ -4,19 +4,7 @@ body {
   font-weight: lighter;
   letter-spacing: 0.1em;
   background-color: black;
-  /* color: rgba(255, 255, 255, 0.7) */
 }
-
-.jumbotron {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://cdnb.artstation.com/p/assets/images/images/007/341/111/large/ricardo-tilim-5-final-grade.jpg?1505449092");
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("http://cinemajam.com/mag/wp-content/uploads/2014/06/noir-FT.jpg"); */
-  background-size: cover;
-  background-position: center;
-}
-
-
-
-
 
 #mainNav {
   min-height: 56px;
@@ -100,10 +88,11 @@ body {
   }
 }
 
-
-
-
-
+.jumbotron {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://cdnb.artstation.com/p/assets/images/images/007/341/111/large/ricardo-tilim-5-final-grade.jpg?1505449092");
+  background-size: cover;
+  background-position: center;
+}
 
 .heroic {  
   padding-top: 1.5em;
@@ -131,12 +120,10 @@ body {
   animation: fade 1.5s linear;
 }
 
-
 @keyframes fade {
 0%,100% { opacity: 0.5 }
 50% { opacity: 0.9 }
 }
-
 
 .frontPageUsers {
   font-size: 35px;
@@ -163,11 +150,14 @@ header {
 
 a {
   color: rgba(255, 255, 255, 0.7);
-  /* text-decoration: underline; */
 }
 
 a:hover {
   color: white;
+}
+
+.nav-item {
+  text-decoration: underline;
 }
 
 /* .singleUser {
