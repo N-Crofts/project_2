@@ -57,8 +57,10 @@
             <h1 class="mt-5">{{author.name}}</h1>
             <p>{{author.about}}</p>
             <div>
-    <h2>Selected Works:</h2> 
-    <ul>
+    {{!-- <h2>Selected Works:</h2>  --}}
+              <h2>  <a href='/authors/{{author._id}}/novels'>Selected Works</a></h2>
+
+    {{!-- <ul>
     {{#each author.novels }}
         <li>
         <p>
@@ -66,7 +68,7 @@
             </p>
             </li>
     {{/each}}
-    </ul>
+    </ul> --}}
 </div>
           </div>
         </div>

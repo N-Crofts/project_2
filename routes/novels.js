@@ -19,6 +19,18 @@ router.get('/', (req, res) => {
 
 
 //new, render new form
+router.get('/new', (req, res) => {
+    res.render('../novels/new')
+  })
+  
+//create
+  router.post('/', (req, res) => {
+    const newNovel = req.body
+    Novel.create(newNovel)
+      .then(() => {
+        res.redirect('/novels')
+      })
+  })
 
 
 //show, show one

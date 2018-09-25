@@ -1,0 +1,100 @@
+<div class="newNovel">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+      <div class="container">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">{{!-- Home --}}
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/authors">Back</a>
+            </li>
+            {{!-- <li class="nav-item">
+              <a class="nav-link" href="/users/{{user._id}}/edit">Edit</a>
+            </li>
+            <li class="nav-item">
+<form class="nav-link" action='/users/{{user._id}}?_method=DELETE' method='POST'>
+    <input type="submit" value="Delete">
+</form>
+         </li> --}}
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="mt-5">New Author:</h1>
+            <div>
+                <br>
+    <p>    
+        <form class="signUp" action='/authors' method='POST'>
+
+    <div class="left">name:</div> <div class="right"><input type='text' name='name'></div>
+    <br>
+    <br>
+    <div class="left">about:</div> <div class="right"><input type='text' name='about'></div>
+    <br>
+    <br>
+    {{!-- <div class="left">novel:</div> <div class="right"><input type='text' name='novels'></div>
+    <br>
+    <br> --}}
+    <div class="submit"><input type='submit' value='Create'></div>
+
+        </form>
+    
+    </p>     
+
+</div>
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
+
+
+
+
+
+{{!-- ////////////////////////////////// --}}
+
+
+{{!-- <div class="newUser">
+<h1>New User</h1>
+
+<form action='/users' method='POST'>
+    <div>Name: <input type='text' name='username'></div>
+    <div>Age: <input type='text' name='age'></div>
+    <div>Location: <input type='text' name='location'></div>
+    <div>Network: <input type='text' name='network'></div>
+    <div>Favorite Authors: <input type='text' name='authors'></div>
+    <div><input type='submit' value='Create New User'></div>
+</form>
+
+<div><a href='/users'>Go Back to Users</a></div>
+</div> --}}
+
+
+
+
+
+
+{{!-- //////////////////////////////////// --}}
+
+{{!-- <div>
+    <h2>Favorite Authors:</h2> 
+    {{#each authors }}
+        <p>{{name}}</p>
+    {{/each}}
+
+</div> --}}

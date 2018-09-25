@@ -17,9 +17,10 @@ router.get('/new', (req, res) => {
 
 //create
 router.post('/', (req, res) => {
-  Author.create(req.body)
-    .then((author) => {
-      res.redirect(`/authors/${author._id}`)
+  const newAuthor = req.body
+  Author.create(newAuthor)
+    .then(() => {
+      res.redirect('/authors')
     })
 })
 
