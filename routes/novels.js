@@ -40,6 +40,44 @@ router.get('/new', (req, res) => {
         })
   })
 
+// EDIT
+router.get('../:novelId/edit', (req, res) => {
+    const authorId = req.params.authorId
+    const novelId = req.params.novelId
+
+    Author.findById(authorId)
+        .then((author) => {
+            const novel = author.novels.id(novelId)
+            res.render('novel/edit', {
+                novel: novel,
+                authorId: authorId
+            })
+        })
+})
+
+// UPDATE
+
+router.put('/:novelId', (req, res) => {
+    const authorId = req.params.authorId
+    const novelId = req.params.novelId
+    const updatedNovel = req.body
+
+    Author.findByIdAndUpdate(authorId)
+        .then((author) => {
+            const novel = author.novels.id(novelId)
+
+            novel.title = updatedNovel.title
+            novel.synopsis = updatedNovel.synopsis
+
+         return author.save()
+        })
+    
+        .then(() => {
+            res.redirect(`/authors/${authorId}/novels/${novelId}`)
+    })
+})
+
+
 
 //show, show one
 router.get('/:novelId', (req, res) => {
@@ -58,26 +96,23 @@ router.get('/:novelId', (req, res) => {
         })
 })
 
+// DELETE
+
+router.get('/:novelId/delete', (req, res) => {
+    const AuthorId = req.params.AuthorId
+    const novelId = req.params.novelId
+
+    Author.findById(authorId)
+     .then((author) => {
+         const novel = author.novels.id(novelId).remove()
+         return author.save()
+     })
+     .then(() => {
+         res.redirect(`/authors/${authorId}/novels`)
+     })
+})
 
 
-// router.get('/:id', (req, res) => {
-//     Author.findById(req.params.authorId)
-//         .then((author) => {
-//             res.render('novel/show', {
-//                 authorId: req.params.authorId,
-//                 novel: author.novels.id(req.params.id)
-//             })
-//         })
-// })
-
-
-//edit, render edit form
-
-
-//create
-
-
-//update
 
 
 module.exports = router

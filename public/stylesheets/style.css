@@ -1,9 +1,10 @@
 body {
   font-family: 'Cutive Mono', monospace;
   font-size: 20px;
+  font-weight: lighter;
   letter-spacing: 0.1em;
   background-color: black;
-  color: rgba(255, 255, 255, 0.7)
+  /* color: rgba(255, 255, 255, 0.7) */
 }
 
 .jumbotron {
@@ -230,7 +231,7 @@ a:hover {
   padding-bottom: 35%;
 }
 
-.indexNovels, .showNovels {
+.indexNovels, .showNovels, .editNovel {
   background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('http://1.bp.blogspot.com/-fZciKJNjd9U/UGXsl_UyxVI/AAAAAAAAB4M/ThNHSVviIhU/s1600/Detective.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
