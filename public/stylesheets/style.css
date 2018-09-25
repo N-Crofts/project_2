@@ -272,5 +272,15 @@ form:hover {
 }
 
 .join:hover {
-  font-size: 85%
+  font-size: 20px;
+}
+
+.selectedWorks {
+  float: left;
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+.selectedWorks:hover {
+  font-size: 26px;
 }
