@@ -13,8 +13,7 @@
 
    Members can sign on when they arrive, and edit or delete their profile at any time. Further, they can add to Mystery Hub by submitting new authors and novels, or updating existing authors with unlisted works.
 
---------
-ERD:
+Members can sign on when they arrive, and edit or delete their profile at any time. Further, they can add to Mystery Hub by submitting new authors and novels, or adding to existing authors with unlisted works.
 
 ![alt text](https://i.imgur.com/9Wjj005.jpg)
 
