@@ -202,7 +202,7 @@ a:hover {
 
 
 .indexAuthors {
-  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('https://i1.wp.com/www.mysterytribune.com/wp-content/uploads/2017/02/noir_city_session40.jpg?quality=95&ssl=1') no-repeat center center fixed;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('https://i1.wp.com/www.mysterytribune.com/wp-content/uploads/2017/02/noir_city_session40.jpg?quality=95&ssl=1') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -212,7 +212,7 @@ a:hover {
 }
 
 .showAuthors, .newAuthor, .newNovel {
-  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('https://cdnb.artstation.com/p/assets/images/images/007/341/099/large/ricardo-tilim-10-noir-office-0890-far.jpg?1505449015') no-repeat center center fixed;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('https://cdnb.artstation.com/p/assets/images/images/007/341/099/large/ricardo-tilim-10-noir-office-0890-far.jpg?1505449015') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -222,7 +222,7 @@ a:hover {
 }
 
 .showUser, .newUser, .editUser {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('https://cdna.artstation.com/p/assets/images/images/005/293/918/large/jared-france-noir-detective-close-x.jpg?1490003824') no-repeat center center fixed;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('https://cdna.artstation.com/p/assets/images/images/005/293/918/large/jared-france-noir-detective-close-x.jpg?1490003824') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -232,7 +232,7 @@ a:hover {
 }
 
 .indexNovels, .showNovels, .editNovel {
-  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('http://1.bp.blogspot.com/-fZciKJNjd9U/UGXsl_UyxVI/AAAAAAAAB4M/ThNHSVviIhU/s1600/Detective.jpg') no-repeat center center fixed;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('http://1.bp.blogspot.com/-fZciKJNjd9U/UGXsl_UyxVI/AAAAAAAAB4M/ThNHSVviIhU/s1600/Detective.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -242,7 +242,7 @@ a:hover {
 }
 
 .indexUsers {
-  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('https://www.laxrange.com/wp-content/uploads/2017/03/Long-Beach-shooting-range.jpeg') no-repeat center center fixed;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('https://www.laxrange.com/wp-content/uploads/2017/03/Long-Beach-shooting-range.jpeg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -288,16 +288,11 @@ form:hover {
 .join {
   font-size: 18px;
   opacity: 0.7;
-  padding-left: 34.9vw;
   padding-top: 1em;
+  float: left;
 }
 
-.submit {
-  font-size: 18px;
-  opacity: 0.7;
-  padding-left: 33.5vw;
-  padding-top: 1em;
-}
+
 
 
 
