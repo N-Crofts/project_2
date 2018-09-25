@@ -14,8 +14,6 @@ var usersRouter = require('./routes/users');
 var authorsRouter = require('./routes/authors');
 var novelsRouter = require('./routes/novels');
 
-// var titleRouter = require('./routes/novels')
-
 var app = express();
 
 // view engine setup
@@ -31,12 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-// app.use('/users/:userId/authors', authorsRouter)
 app.use('/authors', authorsRouter)
-// app.use('/users/:userId/authors/:authorId/novels', novelsRouter)
 app.use('/authors/:authorId/novels', novelsRouter)
-
-// app.use('/authors/:authorId/:novelId', titleRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

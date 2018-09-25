@@ -143,10 +143,6 @@ body {
   float: right;
 }
 
-/* header {
-  text-align: center;
-} */
-
 a {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -158,27 +154,6 @@ a:hover {
 .nav-item {
   text-decoration: underline;
 }
-
-/* .showPage {
-  text-align: center;
-}
-
-.newPage {
-  text-align: center;
-}
-
-.editPage {
-  text-align: center;
-} */
-
-
-/* .pageBanner, .pageTitle, .memberSignOn {
-  text-align: center;
-}
-
-.pageBanner {
-  padding-top: 5%;
-} */
 
 .indexAuthors {
   background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('https://i1.wp.com/www.mysterytribune.com/wp-content/uploads/2017/02/noir_city_session40.jpg?quality=95&ssl=1') no-repeat center center;
