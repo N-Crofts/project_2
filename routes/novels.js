@@ -20,16 +20,24 @@ router.get('/', (req, res) => {
 
 //new, render new form
 router.get('/new', (req, res) => {
-    res.render('../novels/new')
-  })
+    const authorId = req.params.authorId
+    res.render('novels/new', {
+        authorId: authorId
+    })
+})
   
 //create
   router.post('/', (req, res) => {
+    const authorId = req.params.authorId
     const newNovel = req.body
-    Novel.create(newNovel)
-      .then(() => {
-        res.redirect('/novels')
-      })
+    Author.findById(authorId)
+        .then((author) => {
+            author.novels.push(newNovel)
+            return author.save()
+        })
+        .then(() => {
+            res.redirect(`/authors/${authorId}/novels`)
+        })
   })
 
 
