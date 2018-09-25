@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 const { User } = require('../db/schema')
 
-//index, show all
+/////////////////// I N D E X ,   S H O W   A L L  /////////////////////
+
 router.get('/', (req, res) => {
   User.find()
     .then((users) => {
@@ -10,12 +11,14 @@ router.get('/', (req, res) => {
     })
 })
 
-//new, render new form
+/////////////  N E W ,   R E N D E R   N E W   F O R M  ////////////////
+
 router.get('/new', (req, res) => {
   res.render('users/new')
 })
 
-//create
+//////////////////////////  C R E A T E  ///////////////////////////////
+
 router.post('/', (req, res) => {
   User.create(req.body)
     .then((user) => {
@@ -23,17 +26,17 @@ router.post('/', (req, res) => {
     })
 })
 
-//edit, render edit form
+///////////  E D I T ,   R E N D E R   E D I T   F O R M  //////////////
+
 router.get('/:id/edit', (req, res) => {
   User.findById(req.params.id)
     .then((user) => {
-      // const authors = user.authors
-      // res.render('users/edit', { user, authors })
       res.render('users/edit', { user })
     })
 })
 
-//update
+//////////////////////////  U P D A T E  ///////////////////////////////
+
 router.put('/:id', (req, res) => {
   User.findByIdAndUpdate(req.params.id, req.body)
     .then((user) => {
@@ -41,23 +44,22 @@ router.put('/:id', (req, res) => {
     })
 })
 
-//show, show one
+///////////////////  S H O W ,   S H O W   O N E  //////////////////////
+
 router.get('/:id', (req, res) => {
   User.findById(req.params.id)
     .then((user) => {
-      // const authors = user.authors
-      // res.render('users/show', { user, authors })
       res.render('users/show', { user })
     })
 })
 
-//delete
+//////////////////////////  D E L E T E  ///////////////////////////////
+
 router.delete('/:id', (req, res) => {
   User.findByIdAndRemove(req.params.id)
     .then(() => {
       res.redirect('/users')
     })
 })
-
 
 module.exports = router;
