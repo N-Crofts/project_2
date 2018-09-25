@@ -1,4 +1,5 @@
 <div class="showUser">
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
       <div class="container">
         <a class="navbar-brand" href="/">Home</a>
@@ -7,98 +8,41 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">{{!-- Home --}}
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
             <li class="nav-item">
-              <a class="nav-link" href="/users">Members</a>
+              <a class="nav-link" href="/users">Return</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/users/{{user._id}}/edit">Edit</a>
             </li>
             <li class="nav-item">
-<form class="nav-link" action='/users/{{user._id}}?_method=DELETE' method='POST'>
-    <input type="submit" value="Delete">
-</form>
-
-              {{!-- <a class="nav-link" action='/users/{{user._id}}?_method=DELETE' method='POST'>
-    <input type="submit" value="Delete User"></a> --}}
-
-
-
+                <form class="nav-link" action='/users/{{user._id}}?_method=DELETE' method='POST'>
+                    <input type="submit" value="Delete">
+                </form>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Page Content -->
     <section>
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
             <h1 class="mt-5">{{user.username}}</h1>
             <div>
-    <p>    
-        
-    <div class="left">age:</div> <div class="right">{{user.age}}</div>
-    <br>
-    <div class="left">city:</div> <div class="right">{{user.location}}</div>
-    <br>
-    <div class="left">network:</div> <div class="right">{{user.network}}</div>
-    <br>
-    <div class="left">favorite author:</div> <div class="right">{{user.authors}}</div> 
-    
-    </p>
-        
-        
-    
-       
-
-</div>
+                <p>    
+                    <div class="left">age:</div> <div class="right">{{user.age}}</div>
+                    <br>
+                    <div class="left">city:</div> <div class="right">{{user.location}}</div>
+                    <br>
+                    <div class="left">network:</div> <div class="right">{{user.network}}</div>
+                    <br>
+                    <div class="left">favorite authors:</div> <div class="right">{{user.authors}}</div> 
+                </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
 </div>
-
-
-
-{{!-- ///////////////////////////////////// --}}
-
-{{!-- <div class="showPage">
-    <h1>{{user.username}}</h1>
-    
-    <h2>{{user.age}}</h2>
-    <h2>{{user.location}}</h2>
-    <h2>{{user.network}}</h2>
-    <h2>Favorite Authors</h2>
-        <p>{{user.authors}}</p> --}}
-
-
-{{!-- ///////////////////////////////////// --}}
-
-
-
-{{!-- <div>
-    <h2>Favorite Authors:</h2> 
-    {{#each authors }}
-        <p>{{name}}</p>
-    {{/each}}
-
-</div> --}}
-
-{{!-- ///////////////////////////////////// --}}
-
-{{!-- 
-<form action='/users/{{user._id}}?_method=DELETE' method='POST'>
-    <input type="submit" value="Delete User">
-</form>
-
-<div><a href='/users/{{user._id}}/edit'>Edit User</a></div>
-<div><a href='/users'>Go Back to Users</a></div>
-</div>
-
-<div><a href='/'>Home</a></div> --}}
