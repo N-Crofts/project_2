@@ -2,11 +2,8 @@ var express = require('express')
 var router = express.Router({ mergeParams: true })
 const { Author, Novel } = require('../db/schema')
 
-// const Schema = require("../db/schema.js")
-// const AuthorModel = Schema.NovelModel
+/////////////////// I N D E X ,   S H O W   A L L  /////////////////////
 
-
-//index, show all
 router.get('/', (req, res) => {
     const authorId = req.params.authorId
     Author.findById(authorId)
@@ -17,8 +14,8 @@ router.get('/', (req, res) => {
         })
 })
 
+/////////////  N E W ,   R E N D E R   N E W   F O R M  ////////////////
 
-//new, render new form
 router.get('/new', (req, res) => {
     const authorId = req.params.authorId
     res.render('novels/new', {
@@ -26,8 +23,9 @@ router.get('/new', (req, res) => {
     })
 })
   
-//create
-  router.post('/', (req, res) => {
+//////////////////////////  C R E A T E  ///////////////////////////////
+
+router.post('/', (req, res) => {
     const authorId = req.params.authorId
     const newNovel = req.body
     Author.findById(authorId)
@@ -40,46 +38,47 @@ router.get('/new', (req, res) => {
         })
   })
 
-// EDIT
-router.get('../:novelId/edit', (req, res) => {
-    const authorId = req.params.authorId
-    const novelId = req.params.novelId
+// // EDIT
+// router.get('../:novelId/edit', (req, res) => {
+//     const authorId = req.params.authorId
+//     const novelId = req.params.novelId
 
-    Author.findById(authorId)
-        .then((author) => {
-            const novel = author.novels.id(novelId)
-            res.render('novel/edit', {
-                novel: novel,
-                authorId: authorId
-            })
-        })
-})
+//     Author.findById(authorId)
+//         .then((author) => {
+//             const novel = author.novels.id(novelId)
+//             res.render('novel/edit', {
+//                 novel: novel,
+//                 authorId: authorId
+//             })
+//         })
+// })
 
-// UPDATE
+// // UPDATE
 
-router.put('/:novelId', (req, res) => {
-    const authorId = req.params.authorId
-    const novelId = req.params.novelId
-    const updatedNovel = req.body
+// router.put('/:novelId', (req, res) => {
+//     const authorId = req.params.authorId
+//     const novelId = req.params.novelId
+//     const updatedNovel = req.body
 
-    Author.findByIdAndUpdate(authorId)
-        .then((author) => {
-            const novel = author.novels.id(novelId)
+//     Author.findByIdAndUpdate(authorId)
+//         .then((author) => {
+//             const novel = author.novels.id(novelId)
 
-            novel.title = updatedNovel.title
-            novel.synopsis = updatedNovel.synopsis
+//             novel.title = updatedNovel.title
+//             novel.synopsis = updatedNovel.synopsis
 
-         return author.save()
-        })
+//          return author.save()
+//         })
     
-        .then(() => {
-            res.redirect(`/authors/${authorId}/novels/${novelId}`)
-    })
-})
+//         .then(() => {
+//             res.redirect(`/authors/${authorId}/novels/${novelId}`)
+//     })
+// })
 
 
 
-//show, show one
+///////////////////  S H O W ,   S H O W   O N E  //////////////////////
+
 router.get('/:novelId', (req, res) => {
     const authorId = req.params.authorId
     const novelId = req.params.novelId
@@ -98,21 +97,18 @@ router.get('/:novelId', (req, res) => {
 
 // DELETE
 
-router.get('/:novelId/delete', (req, res) => {
-    const AuthorId = req.params.AuthorId
-    const novelId = req.params.novelId
+// router.get('/:novelId/delete', (req, res) => {
+//     const AuthorId = req.params.AuthorId
+//     const novelId = req.params.novelId
 
-    Author.findById(authorId)
-     .then((author) => {
-         const novel = author.novels.id(novelId).remove()
-         return author.save()
-     })
-     .then(() => {
-         res.redirect(`/authors/${authorId}/novels`)
-     })
-})
-
-
-
+//     Author.findById(authorId)
+//      .then((author) => {
+//          const novel = author.novels.id(novelId).remove()
+//          return author.save()
+//      })
+//      .then(() => {
+//          res.redirect(`/authors/${authorId}/novels`)
+//      })
+// })
 
 module.exports = router
